@@ -14,14 +14,14 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import DoorFrontIcon from "@mui/icons-material/DoorFront";
 // استيراد الصور
 import backgroundImg from "../assets/image/r.avif";
-import roomImg from "../assets/image/room1.jpg";
+import roomImg from "../assets/image/z6.jpg";
 
-import roomImg4 from "../assets/image/room4.jpg";
+import roomImg4 from "../assets/image/z5.jpg";
 import roomImage from "../assets/image/chpc.webp";
 import roomDetailImage from "../assets/image/room2.jpg";
-import lakeRoomImg from "../assets/image/room3.jpg"; 
+import lakeRoomImg from "../assets/image/z7.jpg"; 
 
-const Rooms = () => {
+const Single = () => {
   
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -67,7 +67,7 @@ const Rooms = () => {
           textTransform: "uppercase",
         }}
       >
-         Doubles Rooms
+        Single Room
       </Typography>
 
       {/* شريط القائمة الشفاف */}
@@ -178,10 +178,9 @@ Special equipment available on request (large-key telephone, luminous alarm cloc
             For a relaxing stay at the Hotel S&Ch with total privacy, the Sejour
             Park View Room is 27m² in size and enjoys views of the grounds.
           </Typography>
-          <Typography variant="body1" sx={{ mb: 2 }}>
+<Typography variant="body1" sx={{ mb: 2 }}>
            <strong> Le Prix :</strong> 1000000 DZD
           </Typography>
-
           <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
             <SmokeFreeIcon sx={{ color: "#D32F2F", mr: 1 }} />
             <Typography>No smoking</Typography>
@@ -271,11 +270,9 @@ Special equipment available on request (large-key telephone, luminous alarm cloc
         The 40m² Résidence park view room can accommodate 2 adults and 1 child (up to 13 years of age) or 1 infant. The room enjoys a view of the hotel grounds.
 
 Rooms on the 5th floor do not have balconies.
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 2 }}>
-          <strong> Le Prix :</strong> 1500000 DZD
-          </Typography>
-
+        </Typography><Typography variant="body1" sx={{ mb: 2 }}>
+                   <strong> Le Prix :</strong> 1000000 DZD
+                  </Typography>
 
         <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
           <SmokeFreeIcon sx={{ color: "#D32F2F", mr: 1 }} />
@@ -340,11 +337,9 @@ Rooms on the 5th floor do not have balconies.
             <Typography variant="body1" sx={{ mb: 2 }}>
           Perfect for a cosy break, the Séjour lake view room is 27m² in size and offers a furnished balcony.
           </Typography>
-          <Typography variant="body1" sx={{ mb: 2 }}>
-          <strong>Le Prix:</strong> 1200000 DZD
+<Typography variant="body1" sx={{ mb: 2 }}>
+           <strong> Le Prix :</strong> 1000000 DZD
           </Typography>
-
-
           <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
             <SmokeFreeIcon sx={{ color: "#D32F2F", mr: 1 }} />
             <Typography>No smoking</Typography>
@@ -435,11 +430,10 @@ Rooms on the 5th floor do not have balconies.
 
         <Typography variant="body1" sx={{ mb: 2 }}>Designed and equipped to offer ideal conditions for a family, this 43m² room enjoys a balcony with a view of the hotel grounds.
         Ideal for a hotel stay with a 4-person family room, it offers all the comforts required for a memorable stay. For families wanting more space, a family suite is also available, offering a spacious and comfortable setting for relaxing family moments.
-        </Typography>  <Typography variant="body1" sx={{ mb: 2 }}>
-        <strong>Le Prix :</strong>    900000 DZD
+        </Typography>
+<Typography variant="body1" sx={{ mb: 2 }}>
+           <strong> Le Prix :</strong> 1000000 DZD
           </Typography>
-
-
         <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
           <SmokeFreeIcon sx={{ color: "#D32F2F", mr: 1 }} />
           <Typography>No smoking</Typography>
@@ -507,4 +501,4 @@ Rooms on the 5th floor do not have balconies.
   );
 };
 
-export default Rooms;
+export default Single;

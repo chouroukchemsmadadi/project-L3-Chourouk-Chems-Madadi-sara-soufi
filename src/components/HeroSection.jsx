@@ -32,29 +32,45 @@ const HeroSection = () => {
           color: "#5A3E2B",
         }}
       >
-        <Box sx={{ position: "relative", zIndex: 2 }}>
+        <Box sx={{ position: "relative", zIndex: 7 }}>
           <Typography
-            variant="h2"
+            variant="h1"
             sx={{
               fontFamily: "'Playfair Display', serif",
               fontWeight: "bold",
-              fontSize: { xs: "45px", md: "65px" },
+              fontSize: { xs: "80px", md: "45px" },
               color: "rgba(0, 0, 0, 0.8)",
               mb: 1,
+              ml:12,
+              mt:3
             }}
           >
-            Welcome to Hotely S&CH
+            Welcome to Hotely
+          </Typography>
+          <Typography
+            variant="h1"
+            sx={{
+              fontFamily: "'Playfair Display', serif",
+              fontWeight: "bold",
+              fontSize: { xs: "80px", md: "50px" },
+              color: "rgba(0, 0, 0, 0.8)",
+              mb: 1,
+              ml:12,
+            }}
+          >
+             S&CH
           </Typography>
 
           <Typography
             variant="h6"
             sx={{
-              fontSize: { xs: "1rem", md: "1.4rem" },
+              fontSize: { xs: "6rem", md: "1.5rem" },
               fontFamily: "'Poppins', sans-serif",
               fontWeight: "300",
               letterSpacing: "0.8px",
               color: "rgba(17, 16, 15, 0.9)",
-              mb: 5,
+              mb: 1,
+              ml:12,
             }}
           >
             Where comfort meets luxury. Experience a world of elegance and relaxation like never before.
@@ -74,10 +90,11 @@ const HeroSection = () => {
               borderRadius: "8px",
               "&:hover": { backgroundColor: "#6D4F31" },
               boxShadow: "3px 3px 10px rgba(0, 0, 0, 0.2)",
-              borderRadius:"20px"
+              borderRadius:"20px",
+              ml:12,
             }}
           >
-            Book Now
+            Login Now
           </Button>
         </Box>
       </Box>
@@ -86,7 +103,7 @@ const HeroSection = () => {
       <Box
         sx={{
           position: "relative",
-          width: "60%",
+          width: "65%",
           height: "90vh",
           display: "flex",
           alignItems: "center",
@@ -94,6 +111,7 @@ const HeroSection = () => {
           padding: "90px",
           mb: 3,
           mt:2,
+          mr:5,
         }}
       >
         <Box

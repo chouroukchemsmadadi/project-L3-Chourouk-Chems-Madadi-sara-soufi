@@ -180,11 +180,12 @@ const PhotoGallery = () => {
       {/* ✅ القسم الثالث: معرض الصور بنظام Grid */}
       <Box
         sx={{
-          width: "100%",
+          width: "90%",
           padding: "2rem",
           display: "grid",
           gridTemplateColumns: "repeat(3, 1fr)", // خمس أعمدة
           gap: "16px",
+          ml:7,
         }}
       >
         {images.map((imgSrc, index) => (

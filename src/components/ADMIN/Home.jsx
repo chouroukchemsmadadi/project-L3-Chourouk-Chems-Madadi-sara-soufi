@@ -1,5 +1,13 @@
-import React from 'react';
-import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill } from 'react-icons/bs';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+
+
+import {  BsPeopleFill, BsFillBellFill } from 'react-icons/bs';
+import { AiFillCalendar } from "react-icons/ai";
+import { MdReportProblem } from "react-icons/md";
+
+
+
 import {
   BarChart,
   Bar,
@@ -24,41 +32,92 @@ function Home() {
     { name: 'Page G', uv: 3490, pv: 4300, amt: 2100 },
   ];
 
+  const [reservationCount, setReservationCount] = useState(0);{/* Route::get('/reservation/count', function () {
+    return response()->json(['count' => Reservation::count()]);
+});*/}
+  const [clientCount, setClientCount] = useState(0);//GET http://localhost:8000/api/client/count
+
+  const [reclamationCount, setReclamationCount] = useState(0);{/* Route::get('/reclamation/count', function () {
+    return response()->json(['count' => \App\Models\Reclamation::count()]);
+});
+  */}
+
+
+// Get reservation count
+  useEffect(() => {
+    axios.get("http://localhost:8000/api/reservation/count")
+      .then(response => {
+        setReservationCount(response.data.count);
+      })
+      .catch(error => {
+        console.error("Error fetching reservation count:", error);
+      });
+  // Get client count
+  axios.get("http://localhost:8000/api/client/count")
+  .then(response => {
+    setClientCount(response.data.count);
+  })
+  .catch(error => {
+    console.error("Error fetching client count:", error);
+  });
+
+}, []);
+//get reclamation
+axios.get("http://localhost:8000/api/reclamation/count")
+.then(response => {
+  setReclamationCount(response.data.count);
+})
+.catch(error => {
+  console.error("Error fetching reclamation count:", error);
+});
+
+
+
+
+
+  
+
+
   return (
     <main className="main-container">
       {/* Title */}
       <div className="main-title">
-        <h3>DASHBOARD</h3>
+        <h3>DASHBOARD ADMIN</h3>
       </div>
 
       {/* Cards */}
       <div className="main-cards">
-        {/* Card 1 */}
-        <div className="card">
-          <div className="card-inner">
-            <h3>RESERVATION</h3>
-            <BsFillArchiveFill className="card_icon" />
-          </div>
-          <h1>300</h1>
+          {/* Card 1 */}
+      <div className="card">
+        <div className="card-inner">
+          <h3> NEW RESERVATION </h3>
+          <AiFillCalendar className="card_icon" />
         </div>
+        <h1> {reservationCount}</h1> 
+      </div>
 
-        {/* Card 2 */}
-        <div className="card">
-          <div className="card-inner">
-            <h3>CATEGORIES</h3>
-            <BsFillGrid3X3GapFill className="card_icon" />
-          </div>
-          <h1>12</h1>
-        </div>
+       {/* Card 2 - Reclamation */}
+<div className="card">
+  <div className="card-inner">
+    <h3>RECLAMATION</h3>
+    <MdReportProblem className="card_icon" />
+  </div>
+  <h1>{reclamationCount}</h1>
+</div>
+
 
         {/* Card 3 */}
+        {/* Card New Client */}
         <div className="card">
           <div className="card-inner">
-            <h3>CUSTOMERS</h3>
+            <h3>NEW CLIENT</h3>
             <BsPeopleFill className="card_icon" />
           </div>
-          <h1>33</h1>
+          <h1>{clientCount}</h1>
         </div>
+
+
+
 
         {/* Card 4 */}
         <div className="card">

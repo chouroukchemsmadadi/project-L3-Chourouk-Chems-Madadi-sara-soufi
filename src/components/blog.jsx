@@ -149,7 +149,7 @@ function Blog() {
         ))}
       </Box>
 
-      <Box id="about-us" sx={{ backgroundColor: "#F2F0EC", py: 8,ml:19}}>
+      <Box id="about-us" sx={{ backgroundColor: "white", py: 8}}>
         <Container maxWidth="xl" >
           <Typography
             variant="h2"
@@ -163,7 +163,7 @@ function Blog() {
               fontFamily: "'Playfair Display', serif",
               textShadow: "2px 2px 5px rgba(0,0,0,0.5)",
               mb: 0,
-              ml:0,
+              ml:12,
             }}
           >
             BLOG & NEWS

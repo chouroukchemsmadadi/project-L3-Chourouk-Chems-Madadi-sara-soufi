@@ -17,39 +17,39 @@ import { Box, Typography, Button, Grid, Paper , TextField, Container } from "@mu
 
 
 // استيراد الفيديوهات من المجلد المحلي
-import video1 from "./assets/video/vedio1.mp4";
-import video2 from "./assets/video/vedio2.mp4";
+import video1 from "../assets/video/vedio1.mp4";
+import video2 from "../assets/video/vedio2.mp4";
 // استيراد الصور من مجلد assets
-import img1 from "./assets/image/G3.jpg";
-import img2 from "./assets/image/J1.avif";
-import img11 from "./assets/image/J6.jpg";
-import img3 from "./assets/image/J5.jpeg";
-import img4 from "./assets/image/J2.jpg";
-import img5 from "./assets/image/J4.jpg";
-import img6 from "./assets/image/J9.jpg";
-import img7 from "./assets/image/J3.jpg";
-import img8 from "./assets/image/J8.jpg";
-import img9 from "./assets/image/J10.jpg";
-import img10 from "./assets/image/J7.jpg";
-import pasta from "./assets/image/pastaa.jpg";
-import FettuccineAlfredo from "./assets/image/FettuccineAlfredo.jpg";
-import PizzaMargherita from "./assets/image/PizzaMargherita.jpg";
-import  Lasagnes from "./assets/image/Lasagnes.jpg";
-import  Risotto from "./assets/image/Risotto.jpg";
-import  SaladeCaprese from "./assets/image/SaladeCaprese.jpg";
+import img1 from "../assets/image/G3.jpg";
+import img2 from "../assets/image/J1.avif";
+import img11 from "../assets/image/J6.jpg";
+import img3 from "../assets/image/J5.jpeg";
+import img4 from "../assets/image/J2.jpg";
+import img5 from "../assets/image/J4.jpg";
+import img6 from "../assets/image/J9.jpg";
+import img7 from "../assets/image/J3.jpg";
+import img8 from "../assets/image/J8.jpg";
+import img9 from "../assets/image/J10.jpg";
+import img10 from "../assets/image/J7.jpg";
+import pasta from "../assets/image/pastaa.jpg";
+import FettuccineAlfredo from "../assets/image/FettuccineAlfredo.jpg";
+import PizzaMargherita from "../assets/image/PizzaMargherita.jpg";
+import  Lasagnes from "../assets/image/Lasagnes.jpg";
+import  Risotto from "../assets/image/Risotto.jpg";
+import  SaladeCaprese from "../assets/image/SaladeCaprese.jpg";
 
 
 
-import img12 from "./assets/image/M1.jpg";
-import img20 from "./assets/image/M9jpeg.jpeg";
-import img21 from "./assets/image/M2.jpg";
-import img13 from "./assets/image/M3.jpg";
-import img14 from "./assets/image/M4.jpg";
-import img15 from "./assets/image/M8.webp";
-import img16 from "./assets/image/M7.webp";
-import img17 from "./assets/image/M6.jpeg";
-import img18 from "./assets/image/M5.jpg";
-import img19 from "./assets/image/M7.jpeg";
+import img12 from "../assets/image/M1.jpg";
+import img20 from "../assets/image/M9jpeg.jpeg";
+import img21 from "../assets/image/M2.jpg";
+import img13 from "../assets/image/M3.jpg";
+import img14 from "../assets/image/M4.jpg";
+import img15 from "../assets/image/M8.webp";
+import img16 from "../assets/image/M7.webp";
+import img17 from "../assets/image/M6.jpeg";
+import img18 from "../assets/image/M5.jpg";
+import img19 from "../assets/image/M7.jpeg";
 
 
 

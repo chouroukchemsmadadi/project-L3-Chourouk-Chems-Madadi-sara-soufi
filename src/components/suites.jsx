@@ -13,15 +13,15 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 
 import DoorFrontIcon from "@mui/icons-material/DoorFront";
 // استيراد الصور
-import backgroundImg from "../assets/image/r.avif";
-import roomImg from "../assets/image/room1.jpg";
+import backgroundImg from "../assets/image/suite.jpg";
+import roomImg from "../assets/image/S2.jpg";
 
-import roomImg4 from "../assets/image/room4.jpg";
-import roomImage from "../assets/image/chpc.webp";
-import roomDetailImage from "../assets/image/room2.jpg";
-import lakeRoomImg from "../assets/image/room3.jpg"; 
+import roomImg4 from "../assets/image/S1.jpg";
+import roomImage from "../assets/image/S3.jpg";
+import roomDetailImage from "../assets/image/S4.jpg";
+import lakeRoomImg from "../assets/image/S4.jpg"; 
 
-const Rooms = () => {
+const Suites = () => {
   
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -67,7 +67,7 @@ const Rooms = () => {
           textTransform: "uppercase",
         }}
       >
-         Doubles Rooms
+        Suites
       </Typography>
 
       {/* شريط القائمة الشفاف */}
@@ -118,7 +118,7 @@ const Rooms = () => {
             letterSpacing: "3px",
             textTransform: "uppercase",
           }}>
-          The rooms were totally refurbished in 2015 and combine the charm of
+          The SUITES were totally refurbished in 2015 and combine the charm of
           the Belle Epoque with the elegance of contemporary design.
           Facilitated access for people with reduced mobility in the hotel, the park and 5 of our rooms. 
 Special equipment available on request (large-key telephone, luminous alarm clock, etc.) for optimum comfort.
@@ -149,7 +149,7 @@ Special equipment available on request (large-key telephone, luminous alarm cloc
           }}
         >
           <Typography variant="h4" fontWeight="bold" sx={{ mb: 2 }}>
-            Sejour Park View Room
+          Sejour Lake View Suite 
           </Typography>
 
           {/* أيقونات الميزات */}
@@ -177,10 +177,9 @@ Special equipment available on request (large-key telephone, luminous alarm cloc
           </Grid><Typography variant="body1" sx={{ mb: 2 }}>
             For a relaxing stay at the Hotel S&Ch with total privacy, the Sejour
             Park View Room is 27m² in size and enjoys views of the grounds.
-          </Typography>
-          <Typography variant="body1" sx={{ mb: 2 }}>
-           <strong> Le Prix :</strong> 1000000 DZD
-          </Typography>
+          </Typography><Typography variant="body1" sx={{ mb: 2 }}>
+                     <strong> Le Prix :</strong> 1000000 DZD
+                    </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
             <SmokeFreeIcon sx={{ color: "#D32F2F", mr: 1 }} />
@@ -244,7 +243,7 @@ Special equipment available on request (large-key telephone, luminous alarm cloc
         }}
       >
         <Typography variant="h4" fontWeight="bold" sx={{ mb: 2 }}>
-        Piscine View Room
+        Sejour Park View Suite 
         </Typography>
 
         {/* أيقونات الميزات */}
@@ -271,11 +270,9 @@ Special equipment available on request (large-key telephone, luminous alarm cloc
         The 40m² Résidence park view room can accommodate 2 adults and 1 child (up to 13 years of age) or 1 infant. The room enjoys a view of the hotel grounds.
 
 Rooms on the 5th floor do not have balconies.
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 2 }}>
-          <strong> Le Prix :</strong> 1500000 DZD
-          </Typography>
-
+        </Typography><Typography variant="body1" sx={{ mb: 2 }}>
+                   <strong> Le Prix :</strong> 1000000 DZD
+                  </Typography>
 
         <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
           <SmokeFreeIcon sx={{ color: "#D32F2F", mr: 1 }} />
@@ -322,7 +319,7 @@ Rooms on the 5th floor do not have balconies.
           }}
         >
           <Typography variant="h4" fontWeight="bold" sx={{ mb: 2 }}>
-          Sejour Lake View Room
+          Sejour Lake View Suite 
           </Typography>
 
           {/* أيقونات الميزات */}
@@ -339,11 +336,9 @@ Rooms on the 5th floor do not have balconies.
 
             <Typography variant="body1" sx={{ mb: 2 }}>
           Perfect for a cosy break, the Séjour lake view room is 27m² in size and offers a furnished balcony.
-          </Typography>
-          <Typography variant="body1" sx={{ mb: 2 }}>
-          <strong>Le Prix:</strong> 1200000 DZD
-          </Typography>
-
+          </Typography><Typography variant="body1" sx={{ mb: 2 }}>
+                     <strong> Le Prix :</strong> 1000000 DZD
+                    </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
             <SmokeFreeIcon sx={{ color: "#D32F2F", mr: 1 }} />
@@ -413,7 +408,7 @@ Rooms on the 5th floor do not have balconies.
 
       >
         <Typography variant="h4" fontWeight="bold" sx={{ mb: 2 }}>
-       Parc view Room
+        Parc view Suite 
         </Typography>
 
         {/* أيقونات الميزات */}
@@ -435,10 +430,9 @@ Rooms on the 5th floor do not have balconies.
 
         <Typography variant="body1" sx={{ mb: 2 }}>Designed and equipped to offer ideal conditions for a family, this 43m² room enjoys a balcony with a view of the hotel grounds.
         Ideal for a hotel stay with a 4-person family room, it offers all the comforts required for a memorable stay. For families wanting more space, a family suite is also available, offering a spacious and comfortable setting for relaxing family moments.
-        </Typography>  <Typography variant="body1" sx={{ mb: 2 }}>
-        <strong>Le Prix :</strong>    900000 DZD
-          </Typography>
-
+        </Typography><Typography variant="body1" sx={{ mb: 2 }}>
+                   <strong> Le Prix :</strong> 1000000 DZD
+                  </Typography>
 
         <Box sx={{ display: "flex", alignItems: "center", mb: 3 }}>
           <SmokeFreeIcon sx={{ color: "#D32F2F", mr: 1 }} />
@@ -507,4 +501,4 @@ Rooms on the 5th floor do not have balconies.
   );
 };
 
-export default Rooms;
+export default Suites;

@@ -4,7 +4,7 @@ import { Box, Typography, Grid, Button } from "@mui/material";
 // 🔹 استيراد الصور من assets
 import food1 from "../assets/image/food1.jpg";
 import food2 from "../assets/image/food2.jpg";
-import food3 from "../assets/image/spa.jpg";
+import food3 from "../assets/image/reception.jpg";
 import service1 from "../assets/image/service1.jpg";
 import service2 from "../assets/image/service2.jpg";
 import service3 from "../assets/image/service3.jpg";

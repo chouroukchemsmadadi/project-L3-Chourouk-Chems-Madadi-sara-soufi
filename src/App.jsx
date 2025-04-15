@@ -1,47 +1,35 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header.jsx";
-import HeroSection from "./components/HeroSection.jsx";
-import BookingForm from "./components/BookingForm.jsx";
-import WhyChooseUs from "./components/WhyChooseUs.jsx";
-import H from "./components/H1.jsx";
-import Events from "./components/Events.jsx";
-import Footer from "./components/Footer.jsx";
-import HotelSection from "./components/HotelSection.jsx";
-import Enjoy from "./components/enjoy.jsx";
-import Auth from "./components/Login.jsx";
-import Rooms from "./components/Rooms.jsx";
-import Photogallery from "./components/Photogallery.jsx"; // Add the import for Photogallery
-import Blog from "./components/blog.jsx"; // تأكد من استيراد ملف Blog
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Title from "./components/ADMIN/title.jsx";
+import Sidebar from './components/ADMIN/Sidebar.jsx';
+import Home from './components/ADMIN/Home.jsx';
+import ManageRoom from './components/ADMIN/gestionch.jsx'; // ✅ استوردنا الصفحة الجديدة
+import GestionDesReservations from './components/ADMIN/gestionres.jsx'; // ✅ استوردنا الصفحة الجديدة
 
-const Home = () => (
-  <>
-    <Header />
-    <HeroSection />
-    <BookingForm />
-    <Enjoy />
-    <HotelSection />
-    <WhyChooseUs />
-    <Events />
-    <Footer />
-  </>
-);
+function App() {
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
 
-const App = () => {
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle);
+  };
+
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Auth />} />
-        <Route path="/about" element={<H />} />
-        <Route path="/rooms" element={<Rooms />} />
+      <div className='grid-container'>
+        <Title OpenSidebar={OpenSidebar} />
+        <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
+        
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
 
-       <Route path="/photogallery" element={<Photogallery />} /> {/* Add the new route for Photogallery */}
-       <Route path="/blog" element={<Blog />} /> {/* إضافة مسار صفحة Blog */}
-      </Routes>
-
+          <Route path="/chambres" element={<ManageRoom />} /> {/* ✅ هنا */}
+          <Route path="/reservations" element={<GestionDesReservations />} /> {/* ✅ هنا */}
+        </Routes>
+      </div>
     </Router>
   );
-};
+}
 
 export default App;

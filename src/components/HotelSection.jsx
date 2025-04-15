@@ -7,9 +7,9 @@ import room2 from "../assets/image/chmbre2.jpg";
 import room3 from "../assets/image/chambre3.jpg";
 
 const rooms = [
-  { img: room1, title: "Luxury Suite" },
-  { img: room2, title: "Deluxe Room" },
-  { img: room3, title: "Family Suite" },
+  { img: room1, title: "Suite" },
+  { img: room2, title: "Double Rooms" },
+  { img: room3, title: "Family Room" },
 ];
 
 const HotelSection = () => {

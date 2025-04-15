@@ -9,6 +9,7 @@ import BalconyIcon from '@mui/icons-material/Balcony';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import HistoryIcon from '@mui/icons-material/History';  // Ajouter cette importation pour HistoryIcon
+import { width } from '@mui/system';
 
 function GestionDesChambres() {
   const [roomData, setRoomData] = useState({
@@ -252,16 +253,33 @@ function GestionDesChambres() {
       <div className="section">
         <h2>Creer Chambre</h2>
         <div className="room-form">
-          <label>
-            Le Type de la Chambre:
-            <input
-              type="text"
-              name="name"
-              value={roomData.name}
-              onChange={handleInputChange}
-              placeholder="Entrez le nom de la chambre"
-            />
-          </label>
+        <label>
+  Le Type de la Chambre:
+  <select
+    name="name"
+    value={roomData.name}
+    onChange={handleInputChange}
+    style={{ width: '100%', padding: '10px', fontSize: '16px' }}
+  >
+    <option value="">Sélectionnez un type de chambre</option>
+
+    <optgroup label="ROOMS">
+      <option value="Sejour Park View Room">Sejour Park View Room</option>
+      <option value="Residence Park View Room">Residence Park View Room</option>
+      <option value="Sejour Lake View Room">Sejour Lake View Room</option>
+      <option value="Family Room">Family Room</option>
+    </optgroup>
+
+    <optgroup label="SUITES">
+      <option value="Suite Standard">Suite Standard</option>
+      <option value="Suite Junior">Suite Junior</option>
+      <option value="Suite Exécutive">Suite Exécutive</option>
+      <option value="Suite Présidentielle">Suite Présidentielle</option>
+    </optgroup>
+  </select>
+</label>
+
+
           <label>
             ID de la Chambre:
             <input
