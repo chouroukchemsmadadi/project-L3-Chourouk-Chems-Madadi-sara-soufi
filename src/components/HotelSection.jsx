@@ -1,5 +1,9 @@
-import React from "react";
-import { Box, Typography, Grid, Button } from "@mui/material";
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { Grid, Typography, Button, Box,  Paper, } from "@mui/material";
+import roomImage from "../assets/image/room5.jpg";
 
 // 🔹 استيراد الصور من مجلد assets
 import room1 from "../assets/image/chambre1.jpg";
@@ -7,12 +11,14 @@ import room2 from "../assets/image/chmbre2.jpg";
 import room3 from "../assets/image/chambre3.jpg";
 
 const rooms = [
-  { img: room1, title: "Suite" },
+  { img: room1, title: "Single Room" },
   { img: room2, title: "Double Rooms" },
   { img: room3, title: "Family Room" },
 ];
 
 const HotelSection = () => {
+    const navigate = useNavigate();
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <Box sx={{ textAlign: "center", py: 5 }}>
       {/* ✨ زخرفة عنوان "WELCOME TO HOTEL" */}
@@ -95,6 +101,9 @@ const HotelSection = () => {
       </Grid>
 
       {/* 🔴 زر "View All" مع زخرفة إضافية */}
+      
+      
+      <Box sx={{ position: "relative" }}>
       <Button
         variant="contained"
         sx={{
@@ -114,11 +123,164 @@ const HotelSection = () => {
             transform: "translateY(-2px)",
             boxShadow: "0 6px 15px rgba(0,0,0,0.3)",
           },
-        }}
+        }} onClick={() => setIsMenuOpen(!isMenuOpen)} 
       >
         View All
       </Button>
-    </Box>
+
+
+      
+        {isMenuOpen && (
+          <Paper
+            elevation={5}
+            sx={{
+              position: "absolute",
+              top: "45px",
+              right: 5,
+              backgroundColor: "rgba(0, 0, 0, 0.6)",
+              padding: "20px",
+              borderRadius: "30px",
+              minWidth: "320px",
+              zIndex: 1000,
+              color: "white",
+              mr:57,
+              mt:4
+            }}
+            onMouseLeave={() => setIsMenuOpen(false)} // تغلق عند الخروج بالفأرة
+          >
+            <Box sx={{ display: "flex", alignItems: "center", gap: 2, marginBottom: 1 }}>
+              
+              <Button
+                onClick={() => {
+                  navigate("/rooms");
+                  setIsMenuOpen(false); // إغلاق القائمة عند الضغط على العنصر
+                }}
+                sx={{
+                  color: "#fff",
+                  justifyContent: "flex-start",
+                  backgroundColor:"rgba(239, 233, 233, 0.2)",
+                  textTransform: "none",
+                  padding: 0,
+                  minWidth: "100px",
+                  
+                  "&:hover": { backgroundColor: "rgba(255,255,255,0.2)" },
+      
+                }}
+              >
+                <Typography
+        variant="h7"
+        sx={{
+          marginLeft: "20px",  // إضافة مسافة فارغة قبل النص
+        }}
+      >
+       Doubles 
+      </Typography>
+              
+              </Button>
+      
+              <Button
+                onClick={() => {
+                  navigate("/single");
+                  setIsMenuOpen(false); // إغلاق القائمة عند الضغط على العنصر
+                }}
+                sx={{
+                  color: "#fff",
+                  justifyContent: "flex-start",
+                  backgroundColor:"rgba(239, 233, 233, 0.2)",
+                  textTransform: "none",
+                  padding: 0,
+                  minWidth: "100px",
+                  
+                  "&:hover": { backgroundColor: "rgba(255,255,255,0.2)" },
+      
+                }}
+              >
+                <Typography
+        variant="h7"
+        sx={{
+          marginLeft: "20px",  // إضافة مسافة فارغة قبل النص
+        }}
+      >
+       Single 
+      </Typography>
+              
+              </Button>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+              <Button
+                onClick={() => {
+                  navigate("/familly");
+                  setIsMenuOpen(false); // إغلاق القائمة عند الضغط على العنصر
+                }}
+                sx={{
+                  color: "#fff",
+                  justifyContent: "flex-start",
+                  backgroundColor:"rgba(239, 233, 233, 0.2)",
+                  textTransform: "none",
+                  padding: 0,
+                  minWidth: "100px",
+                  
+                  "&:hover": { backgroundColor: "rgba(255,255,255,0.2)" },
+      
+                }}
+              >
+                <Typography
+        variant="h7"
+        sx={{
+          marginLeft: "20px",  // إضافة مسافة فارغة قبل النص
+        }}
+      >
+       Familly 
+      </Typography>
+              
+              </Button>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+              <Button
+                onClick={() => {
+                  navigate("/suites");
+                  setIsMenuOpen(false); // إغلاق القائمة عند الضغط على العنصر
+                }}
+                sx={{
+                  color: "#fff",
+                  justifyContent: "flex-start",
+                  textTransform: "none",
+                  padding: 0,
+                  minWidth: "100px",
+                  backgroundColor:"rgba(239, 233, 233, 0.2)",
+                  "&:hover": { backgroundColor: "rgba(255,255,255,0.2)" },
+                }}
+              >
+               <Typography
+        variant="h7"
+        sx={{
+          marginLeft: "20px",  // إضافة مسافة فارغة قبل النص
+        }}
+      >
+      Suites 
+      </Typography>
+              </Button>
+            </Box>
+          </Paper>
+        )}
+      </Box>
+      
+                </Box>
+   
   );
 };
 

@@ -25,7 +25,7 @@ const GreenButton = styled(Button)({
 const Enjoy = () => {
   return (
     <Root>
-      <Container>
+      <Container sx={{mt:8}}>
         <Grid container spacing={4} alignItems="center">
           <Grid item xs={12} md={6}>
             <img
